@@ -1,4 +1,4 @@
-'use strict';
+/*'use strict';
 
 angular.module('SmartAdmin.Layout').directive('smartFitAppView', function ($rootScope, SmartCss) {
     return {
@@ -28,4 +28,4 @@ angular.module('SmartAdmin.Layout').directive('smartFitAppView', function ($root
 
         }
     }
-});
+});*/
