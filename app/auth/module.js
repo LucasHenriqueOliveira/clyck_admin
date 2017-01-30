@@ -57,6 +57,8 @@ angular.module('app.auth', [
         url: '/register',
         views: {
             root: {
+                controller: 'RegisterCtrl',
+                controllerAs: 'vm',
                 templateUrl: 'app/auth/views/register.html'
             }
         },
