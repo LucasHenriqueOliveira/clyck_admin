@@ -49,81 +49,23 @@
                 <div class="well no-padding">
 
                     <form action="#/login" id="smart-form-register" class="smart-form client-form">
-                        <header>
-                            Conta
-                        </header>
 
-                        <fieldset>
-                            <section>
-                                <label class="input"> <i class="icon-append fa fa-user"></i>
-                                    <input type="text" name="username" placeholder="Username">
-                                    <b class="tooltip tooltip-bottom-right">Escolha um nome de usuário</b> </label>
-                            </section>
 
-                            <section>
-                                <label class="input"> <i class="icon-append fa fa-envelope"></i>
-                                    <input type="email" name="email" placeholder="Email">
-                                    <b class="tooltip tooltip-bottom-right">Digite um e-mail</b> </label>
-                            </section>
+                        <!-- widget div-->
+                        <div>
 
-                            <section>
-                                <label class="input"> <i class="icon-append fa fa-lock"></i>
-                                    <input type="password" name="password" placeholder="Password" id="password">
-                                    <b class="tooltip tooltip-bottom-right">Não esqueça sua senha</b> </label>
-                            </section>
 
-                            <section>
-                                <label class="input"> <i class="icon-append fa fa-lock"></i>
-                                    <input type="password" name="passwordConfirm" placeholder="Confirm password">
-                                    <b class="tooltip tooltip-bottom-right">Não esqueça sua senha</b> </label>
-                            </section>
-                        </fieldset>
-
-                        <fieldset>
-                            <div class="row">
-                                <section class="col col-6">
-                                    <label class="input">
-                                        <input type="text" name="firstname" placeholder="Nome">
-                                    </label>
-                                </section>
-                                <section class="col col-6">
-                                    <label class="input">
-                                        <input type="text" name="lastname" placeholder="Sobrenome">
-                                    </label>
-                                </section>
+                            <!-- widget content -->
+                            <div class="widget-body no-padding">
+                                <div data-smart-include="app/auth/views/registration-form.html"></div>
                             </div>
+                            <!-- end widget content -->
 
-                            <div class="row">
-                               <!-- <section class="col col-6">
-                                    <label class="select">
-                                        <select name="gender">
-                                            <option value="0" selected="" disabled="">Sexo</option>
-                                            <option value="1">Male</option>
-                                            <option value="2">Female</option>
-                                            <option value="3">Prefer not to answer</option>
-                                        </select> <i></i> </label>
-                                </section>-->
-                               <!-- <section class="col col-6">
-                                    <label class="input"> <i class="icon-append fa fa-calendar"></i>
-                                        <input type="text" name="request" placeholder="Request activation on" class="datepicker" data-dateformat='dd/mm/yy'>
-                                    </label>
-                                </section>-->
-                            </div>
+                        </div>
 
-                            <section>
-                                <label class="checkbox">
-                                    <input type="checkbox" name="subscription" id="subscription">
-                                    <i></i>Quero receber notícias e ofertas especiais</label>
-                                <label class="checkbox">
-                                    <input type="checkbox" name="terms" id="terms">
-                                    <i></i>Concordo com o <a href="#" data-toggle="modal" data-target="#myModal"> Termos e Condições </a></label>
-                            </section>
-                        </fieldset>
-                        <footer>
-                            <button type="submit" class="btn btn-primary">
-                                Register
-                            </button>
-                        </footer>
+
+
+
 
                         <div class="message">
                             <i class="fa fa-check"></i>

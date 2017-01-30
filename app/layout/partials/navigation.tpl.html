@@ -12,9 +12,23 @@
 
         <ul data-smart-menu>
 
-            <li data-ui-sref-active="active">
-                <a data-ui-sref="app.home" title="Outlook">
-                    <i class="fa fa-lg fa-fw fa-home"></i> <span class="menu-item-parent">{{getWord('Home')}}</span></a>
+
+            <li data-menu-collapse class="top-menu-invisible">
+                <a href="#"><i class="fa fa-building-o" aria-hidden="true"></i></i> <span class="menu-item-parent">{{getWord('Comerciante')}}Comerciante</span></a>
+                <ul>
+                    <li data-ui-sref-active="active">
+                        <a data-ui-sref="app.comerciante.dados"><i class="fa fa-user" aria-hidden="true"></i>
+                            {{getWord('Dados Cadastrais')}}Dados Cadastrais</a>
+                    </li>
+                    <li data-ui-sref-active="active">
+                        <a data-ui-sref="app.auth"><i class="fa fa-birthday-cake" aria-hidden="true"></i>
+                            {{getWord('Eventos')}}Eventos</a>
+                    </li>
+                    <li data-ui-sref-active="active">
+                        <a data-ui-sref="app.auth"><i class="fa fa-birthday-cake" aria-hidden="true"></i>
+                            {{getWord('Login')}}log</a>
+                    </li>
+                </ul>
             </li>
 
 
