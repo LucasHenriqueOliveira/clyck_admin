@@ -37,7 +37,10 @@ angular.module('app', [
     //'app.smartAdmin',
     //'app.eCommerce'
     'app.home',
-    'app.comerciante'
+    'app.comerciante',
+    'ngCpfCnpj',
+    'ui.mask',
+    'angular-loading-bar'
 
 ])
 .config(function ($provide, $httpProvider, RestangularProvider) {

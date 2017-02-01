@@ -1,4 +1,7 @@
-<form id="smart-form-register" class="smart-form" data-smart-registration-form ng-submmit="vm.register">
+<form name="form"
+      class="smart-form"
+      ng-submmit="vm.submitForm(form.$valid)"
+      novalidate>
     <header>
        Abra sua Conta
     </header>
@@ -6,38 +9,53 @@
     <fieldset>
         <section>
             <label class="input"> <i class="icon-append fa fa-user"></i>
-                <input type="text" name="username" placeholder="Nome de Usuário" ng-model="vm.username">
+                <input type="text"
+                       name="username"
+                       placeholder="Nome de Usuário"
+                       ng-model="vm.username"
+                       required>
                 <b class="tooltip tooltip-bottom-right">Escolha um nome para login</b> </label>
+                <div class="note note-error" ng-show="form.username.$invalid && !form.username.$pristine" >Informe um nome para login</div>
         </section>
 
 
         <section>
             <label class="input"> <i class="icon-append fa fa-envelope-o"></i>
-                <input type="email" name="email" placeholder="Email" ng-model="vm.email">
+                <input type="email" name="email" placeholder="Email" ng-model="vm.email" required>
+
                 <b class="tooltip tooltip-bottom-right">Informe um e-mail</b> </label>
+            <div class="note note-error" ng-show="form.email.$invalid && !form.email.$pristine" >Informe um email válido</div>
+
+
         </section>
 
         <section>
             <label class="input"> <i class="icon-append fa fa-lock"></i>
-                <input type="password" name="password" placeholder="Senha" id="password" ng-model="vm.password">
+                <input type="password" name="password" placeholder="Senha" id="password" ng-model="vm.password" required ng-minlength="4">
                 <b class="tooltip tooltip-bottom-right">Não esqueça sua senha</b> </label>
+            <div class="note note-error" ng-show="form.password.$invalid && !form.password.$pristine" >Não esqueça sua senha</div>
+
         </section>
 
         <section>
             <label class="input"> <i class="icon-append fa fa-lock"></i>
-                <input type="password" name="passwordConfirm" placeholder="Confirmar Senha" ng-model="vm.confirm">
+                <input type="password" name="passwordConfirm" placeholder="Confirmar Senha" ng-model="vm.confirm" required ng-minlength="4">
                 <b class="tooltip tooltip-bottom-right">Não esqueça sua senha</b> </label>
+            <div class="note note-error" ng-show="form.passwordConfirm.$invalid && !form.passwordConfirm.$pristine" >Não esqueça sua senha</div>
         </section>
 
         <div class="row">
             <section class="col col-6">
                 <label class="input">
-                    <input type="text" name="Nome" placeholder="Nome" ng-model="vm.name">
+                    <input type="text" name="nome" placeholder="Nome" ng-model="vm.name" required ng-minlength="4">
+                    <div class="note note-error" ng-show="form.nome.$invalid && !form.nome.$pristine" >Informe seu Nome</div>
+
                 </label>
             </section>
             <section class="col col-6">
                 <label class="input">
-                    <input type="text" name="sobrenome" placeholder="Sobrenome"  ng-model="vm.sobrenome">
+                    <input type="text" name="sobrenome" placeholder="Sobrenome"  ng-model="vm.sobrenome" required ng-minlength="4">
+                    <div class="note note-error" ng-show="form.sobrenome.$invalid && !form.sobrenome.$pristine" >Informe seu Nome</div>
                 </label>
             </section>
         </div>
@@ -45,13 +63,21 @@
         <div class="row">
             <section class="col col-6">
                 <label class="input">
-                    <input type="text" name="cpf" placeholder="CPF"  ng-model="vm.cpf">
+                    <input type="text"
+                           name="cpf"
+                           placeholder="CPF"
+                           ng-model="vm.cpf"
+
+                           ng-minlength="14"
+                            >
+                    <div class="note note-error" ng-show="form.sobrenome.$invalid && !form.sobrenome.$pristine" >Informe seu Nome</div>
+
                 </label>
             </section>
             <section class="col col-6">
                 <label class="input"> <i class="icon-append fa fa-calendar"></i>
                     <input type="text" name="data_nascimento" placeholder="Data de Nascimento"
-                           data-smart-datepicker data-dateformat='dd/mm/yy' ng-model="vm.birthday">
+                            ng-model="vm.birthday">
                 </label>
             </section>
         </div>
@@ -59,7 +85,7 @@
 
     </fieldset>
     <footer>
-        <button type="submit" class="btn btn-primary">
+        <button type="submit" class="btn btn-primary" >
           Registrar
         </button>
     </footer>
